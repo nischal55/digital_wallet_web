@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>User Register Test</title>
+    <h:outputStylesheet name="styles/styles.css" />
+</h:head>
+
+<h:body>
+    <div class="main-box">
+        <h:form styleClass="custom-form" style="width:25rem;">
+            <h2 class="form-title">User Login Form</h2>
+            <h:outputText id="labelUsername" value="Username"/><br/>
+            <p:inputText id="username" styleClass="custom-input" required="true" value="#{AuthBean.username}"  requiredMessage="Username is required."/>
+            <h:message for="username" style="color:red;"/><br/><br/>
+            <h:outputText id="labelPassword" value="Password"/><br/>
+            <p:password id="password" styleClass="custom-input" required="true" value="#{AuthBean.password}" requiredMessage="Password is required."/>
+            <h:message for="username" style="color:red;"/><br/><br/>
+            <p:commandButton value="Login"  styleClass="btn-primary" action="#{AuthBean.loginTest}" ajax="false"/><br/><br/>
+            <p:commandButton value="Register" styleClass="btn-primary" action="#{AuthBean.registerPage}" ajax="false" immediate="true"/><br/>
+        </h:form>
+    </div>
+
+</h:body>
+
+</html>

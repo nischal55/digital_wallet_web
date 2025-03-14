@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                                  http://java.sun.com/xml/ns/javaee/web-facesconfig_2_2.xsd"
+              version="2.2">
+
+    <managed-bean>
+        <managed-bean-name>AuthBean</managed-bean-name>
+        <managed-bean-class>controllers.AuthBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+
+    <navigation-rule>
+        <from-view-id>/pages/loginPage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>register</from-outcome>
+            <to-view-id>/pages/userRegister.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>dashboard</from-outcome>
+            <to-view-id>/pages/dashboard.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/pages/userRegister.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/pages/loginPage.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

@@ -2,7 +2,9 @@ package dao;
 
 import java.util.List;
 import models.User;
+import javax.ejb.Local;
 
+@Local
 public interface UserDao {
     boolean save(User user);
     User findById(Long id);

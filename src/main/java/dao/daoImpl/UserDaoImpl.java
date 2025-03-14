@@ -4,7 +4,9 @@ import dao.UserDao;
 import models.User;
 import javax.persistence.*;
 import utils.JpaUtil;
+import javax.ejb.Stateless;
 
+@Stateless
 public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 
     public UserDaoImpl(){

@@ -3,7 +3,6 @@ package services;
 import models.User;
 import dao.UserDao;
 import utils.JwtUtil;
-import org.mindrot.jbcrypt.BCrypt;
 
 public class AuthService {
     private UserDao userDao;

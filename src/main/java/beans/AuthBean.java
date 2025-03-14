@@ -1,11 +1,10 @@
-package controllers;
+package beans;
 
 import dao.UserDao;
 import dao.daoImpl.UserDaoImpl;
 import models.User;
 import org.mindrot.jbcrypt.BCrypt;
 import services.AuthService;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 

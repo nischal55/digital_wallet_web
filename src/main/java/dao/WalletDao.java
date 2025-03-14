@@ -10,4 +10,5 @@ public interface WalletDao {
     List<Wallet> findAll();
     void update(Wallet wallet);
     void delete(Long id);
+    Wallet findWalletByContact(String contact);
 }
